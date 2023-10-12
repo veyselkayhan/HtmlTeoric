@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .container{
+            display: inline-block;
+            border: 1px rgb(239, 165, 36) solid; 
+            text-align: center; 
+            border-radius: 20px; 
+            width: 50%;
+        }
+        .container-padding{
+            padding: 15px;
+        }
+        h1{
+            color: #1971c1;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+        #label_baslik{
+            color: #f08c00;
+        }
+        input{
+            padding: 2%;
+            width: 96%;
+            border: 1px #f08c00 solid ;
+            border-radius: 5px;
+        }
+        .div-left{
+            text-align: left;
+            width: 90%;
+        }
+        .div-right{
+            text-align: right;
+        }
+        button{
+            border: 1px #1971c2 solid ;
+            background-color: #a8d5ff;
+            color: #1971c1;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            padding: 7px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+        }
+        .div-p90{
+            width: 90%;
+        }
+        img{
+            width: 40%;
+            border-radius:50%;
+        }
+        .div-mb{
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .lbl-plus{
+            font-size: 25px;
+            color: red;
+            border: 1px red solid;
+            border-radius: 50%;
+            margin-top: -100px;
+            position: absolute;
+            left: 10px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <!--
+        inline element -> sadece hacmi kadar yer kaplar
+        block element -> tüm satırı doldurur
+    
+    -->
+    <div style="text-align: center;">
+        <div class="container container-padding">
+
+                <div>
+                    <img src="lock.png" >
+                    <label class="lbl-plus"></label>
+                </div>
+                <div class="div-left">
+                    <!-- 
+                        html tag lerinin özelliklerini değiştirdiğmiiz 
+                        kısımlara attribute denilyor.
+                    -->
+                    <label id="label_baslik" style="display: block;margin-bottom: 5px;" for="txt_username">Kullanıcı Adı</label>
+                    <input type="text" name="txt_username" id="txt_username">
+                </div>
+                <div class="div-left">
+                    <label id="label_baslik" style="display: block;margin-bottom: 5px;" for="txt_password">Şifre</label>
+                    <input type="password" name="txt_password" id="txt_password">
+                </div>
+            <div class="div-right div-p90">
+                    <button type="submit">Giriş Yap</button>
+            </div>
+
+            </div>
+    </div>
+    
+
+   
+</body>
+</html>
