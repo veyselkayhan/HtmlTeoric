@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtmetin" onkeyup="yazdir()">
+    <label id="icerik" style="color: red; font-size: 22px;"></label>
+
+
+    <script>
+        function yazdir(){
+            let mytext=document.getElementById('txtmetin').value;
+            document.getElementById('icerik').textContent=mytext;
+        }
+    </script>
+</body>
+</html>

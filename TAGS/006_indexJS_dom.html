@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <input type="text" name="txtad" id="txtsayi1">
+    <br><br>
+    <input type="text" name="txtadres" id="txtsayi2">
+    <br><br>
+    <button type="sumbit" onclick="toplam()">Toplam</button>
+    <br><br><br>
+    <label id="txtsonuc" style="color: red;font-size: 28px;"></label>
+    </div>
+
+    <script>
+        /**
+         * document ->html sayfasının içindeki tüm bileşenler
+         * bunun içinde bulunan objelerin tamamına dom denir.
+         * Bazı JS frameworkleri bu DOM u sanal olarak yöneterek
+         * işlemlerini yaparlar virtualDOM kullanarak daha performanslı
+         * sistemler tasarlanır.
+         * Java da bir nesneyi nasıl this ile tanımlıyor isek
+         * JS de sayfayı document ile tanımlarız. 
+         */
+        console.error("Hata Var");
+         function toplam(){
+            let sayi1 = document.getElementById('txtsayi1').value;
+            let sayi2=document.getElementById('txtsayi2').value;
+
+            console.log('sayi1....',sayi1);
+            console.log('sayi2....',sayi2);
+
+            let toplam=parseInt(sayi1)+parseInt(sayi2);
+            console.log('toplam : ',toplam)
+         }
+
+         const ozelToplam=(s1,s2)=>{
+            return parseInt(s1)+parseInt(s2);
+         }
+    </script>
+</body>
+</html>
