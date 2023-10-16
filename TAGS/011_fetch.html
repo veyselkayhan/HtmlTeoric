@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Islemleri Ile Data Cekmek</title>
+
+    <style>
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            margin: 3px;
+        }
+        #divuser {
+            padding: 5px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            border: 1px red solid;
+        }
+        label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        let contentdiv = document.getElementById('content');
+        fetch('https://randomuser.me/api/?results=50')
+            .then(data => data.json())
+            .then(data => {
+                contentdiv.innerHTML = '';
+                data.results.map(user => { 
+                    contentdiv.innerHTML += `
+                        <div id="divuser">
+                            <img src="${user.picture.large}" >
+                            <label>${user.name.first + ' ' + user.name.last}</label> <!-- Değişiklik: ad ve soyad arasına boşluk eklendi -->
+                        </div>
+                    `;
+                });
+            })
+    </script>
+</body>
+</html>
